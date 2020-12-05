@@ -27,9 +27,6 @@ class AddEventToStartButton {
     if (!enteredDuration) {
       return;
     }
-    if (isTimerRunning) {
-      return;
-    }
     isTimerRunning = true;
     minuteNumber = enteredDuration;
     secondNumber = 60;
@@ -46,7 +43,6 @@ class AddEventToStartButton {
       console.log(secondNumber);
       progressTimeBar.style.width = `${barPersentage}%`;
       if (secondNumber === 0 && minuteNumber === 0 ) {
-        alert('よくがんばりました、次のオナニーへ進みましょう');
         clearInterval(intervalId);
         secondNumber = 0;
         minuteNumber = 0;
@@ -87,7 +83,7 @@ class AddEventToOtherElements {
     this.titleBox = document.getElementById('title-box');
     this.title = this.titleBox.querySelector('h3');
     this.titleBox.addEventListener('click', () => {
-      const enteredTitle = prompt('やるオナニーの種類を入力しましょう');
+      const enteredTitle = prompt('やる種類を入力');
       this.title.textContent = enteredTitle;
     });
   }
@@ -95,7 +91,7 @@ class AddEventToOtherElements {
   addEventToTimerBody() {
     this.timerBody = document.querySelector('.timer-body');
     this.timerBody.addEventListener('click', () => {
-      enteredDuration = parseInt(prompt('何分やるかを設定しましょう'));
+      enteredDuration = parseInt(prompt('何分やる'));
       minuteSpan.textContent = ('0' + enteredDuration).slice(-2);
     })
   }

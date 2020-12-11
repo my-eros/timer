@@ -75,17 +75,7 @@ class AddEventToResetButton {
 
 class AddEventToOtherElements {
   constructor() {
-    this.addEventToTitle();
     this.addEventToTimerBody();
-  }
-
-  addEventToTitle() {
-    this.titleBox = document.getElementById('title-box');
-    this.title = this.titleBox.querySelector('h3');
-    this.titleBox.addEventListener('click', () => {
-      const enteredTitle = prompt('やる種類を入力');
-      this.title.textContent = enteredTitle;
-    });
   }
 
   addEventToTimerBody() {

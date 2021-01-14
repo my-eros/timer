@@ -52,6 +52,9 @@ class AddEventToStartButton {
         minuteNumber = 0;
         secondSpan.textContent = ('0' + secondNumber).slice(-2);
         minuteSpan.textContent = ('0' + minuteNumber).slice(-2);
+        setTimeout(() => {
+          location.reload();
+        }, 2000);
       }
     }, 1000);
   }

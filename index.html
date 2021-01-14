@@ -1,26 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Timer for me</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@2.0.2/destyle.css">
-    <link rel="stylesheet" href="assets/styles/stylesheet.css">
-    <script src="assets/scripts/app.js" defer></script>
-  </head>
-  <body>
 
-    <div class="timer-page flex-center">
-      <div class="timer-box">
-        <div class="timer-body flex-center"><p><span id="minute" >00</span> : <span id="second">00</span></p></div>
-        <div class="time-bar-box flex-around">
-          <div class="time-bar"><div id="progress-time-bar"></div></div>
-        </div>
-        <div class="buttons flex-around">
-          <button id="start">Start</button>
-          <button id="reset">Reset</button>
-        </div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Timer for me</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@2.0.2/destyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="assets/styles/stylesheet.min.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="./assets/scripts/library_easypiechart.js"></script>
+  <script src="assets/scripts/app.js" defer></script>
+</head>
+
+<body>
+  <div class="nipple-image">
+    <img src="./assets/images/nipple3.jpg">
+  </div>
+  <div class="timer-page flex-center">
+    <div class="timer-box">
+      <div class="timer-body flex-center">
+        <h2 class="font-bold"><span id="minute">3</span> : <span id="second">00</span></h2>
+      </div>
+      <div class="buttons flex-around">
+        <a class="waves-effect waves-light btn-large purple grey-text text-lighten-2" id="start">Start</a>
+        <a class="waves-effect waves-light btn-large purple grey-text text-lighten-2" id="reset">Reset</a>
       </div>
     </div>
+    <div class="chart" data-percent="100" id="timer-chart">
+  </div>
+</body>
 
-  </body>
 </html>
